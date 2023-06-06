@@ -1,5 +1,6 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+@import "./sass//abstracts/variables";
+
+@import "./sass/components/Main";
+@import "./sass/components/Header";
+@import "./sass/components/FooterStore";
+@import "./sass/components/FooterContact";
