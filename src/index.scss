@@ -1,6 +1,11 @@
-@import "./sass//abstracts/variables";
+@import "./sass/abstracts/variables";
+
+@import "./sass//base/base";
+@import "./sass//base/typography";
 
 @import "./sass/components/Main";
 @import "./sass/components/Header";
 @import "./sass/components/FooterStore";
 @import "./sass/components/FooterContact";
+@import "./sass/components/MainSectionForm";
+@import "./sass/components/MainSectionSteps";

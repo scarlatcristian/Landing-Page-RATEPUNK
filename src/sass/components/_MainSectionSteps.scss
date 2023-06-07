@@ -1,0 +1,14 @@
+.main-section {
+  &__steps {
+    height: 32rem;
+
+    &--container {
+      display: flex;
+    }
+
+    &--steps {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
