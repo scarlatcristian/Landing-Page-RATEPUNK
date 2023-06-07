@@ -1,14 +1,63 @@
 .main-section {
   &__steps {
-    height: 32rem;
+    padding: 4rem;
+    margin: 5rem;
+    width: 33rem;
+    height: 46rem;
 
     &--container {
       display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5rem;
+
+      &-step-1 {
+      }
+
+      &-step-2 {
+      }
+
+      &-step-3 {
+      }
+
+      &--steps {
+        color: $color-blue-light;
+        font-size: 1.3rem;
+        margin-bottom: 1.4rem;
+      }
+
+      &--headline {
+        color: $color-blue-dark;
+        font-size: 2.1rem;
+        margin-bottom: 1.3rem;
+      }
+
+      &--text {
+        color: $color-blue-dark;
+        font-size: 1.7rem;
+      }
     }
 
     &--steps {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     }
   }
+}
+
+.invite {
+  height: 9rem;
+  margin-right: 3rem;
+}
+
+.collect-coins {
+  height: 9rem;
+  margin-left: 3rem;
+}
+
+.voucher {
+  height: 8rem;
+  margin-right: 3rem;
 }

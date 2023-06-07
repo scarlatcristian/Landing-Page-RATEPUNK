@@ -2,32 +2,44 @@ const MainSectionSteps = () => {
   return (
     <div className="main-section__steps">
       <div className="main-section__steps--container step-1">
-        <img src="./src/assets/invite.svg" alt="invite" />
+        <img src="./src/assets/invite.svg" alt="invite" className="invite" />
         <div className="main-section__steps--steps">
-          <h4>STEP 1</h4>
-          <h3 className="headline">Invite Friends</h3>
-          <p>Refer friends with your referral link.</p>
+          <h4 className="main-section__steps--container--steps">STEP 1</h4>
+          <h3 className="main-section__steps--container--headline headline">
+            INVITE FRIENDS
+          </h3>
+          <p className="main-section__steps--container--text">
+            Refer friends with your unique referral link.
+          </p>
         </div>
       </div>
 
       <div className="main-section__steps--container step-2">
         <div className="main-section__steps--steps">
-          <h4>STEP 2</h4>
-          <h3 className="headline">Collect Coins</h3>
-          <p>
+          <h4 className="main-section__steps--container--steps">STEP 2</h4>
+          <h3 className="main-section__steps--container--headline headline">
+            COLLECT COINS
+          </h3>
+          <p className="main-section__steps--container--text">
             Get one coin for each friend that installs our extension using your
             referral link.
           </p>
         </div>
-        <img src="./src/assets/collect-coins.svg" alt="collect-coins" />
+        <img
+          src="./src/assets/collect-coins.svg"
+          alt="collect-coins"
+          className="collect-coins"
+        />
       </div>
 
       <div className="main-section__steps--container step-3">
-        <img src="./src/assets/voucher.svg" alt="voucher" />
+        <img src="./src/assets/voucher.svg" alt="voucher" className="voucher" />
         <div className="main-section__steps--steps">
-          <h4>STEP 3</h4>
-          <h3 className="headline">Get Voucher</h3>
-          <p>
+          <h4 className="main-section__steps--container--steps">STEP 3</h4>
+          <h3 className="main-section__steps--container--headline headline">
+            GET VOUCHER
+          </h3>
+          <p className="main-section__steps--container--text">
             Redeem for a 20$ hotel booking voucher once you collect 20 coins.
           </p>
         </div>
