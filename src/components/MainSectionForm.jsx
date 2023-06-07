@@ -5,7 +5,7 @@ const MainSectionForm = () => {
     <form className="main-section__form">
       <div className="main-section__form--container">
         <h1 className="main-section__form--headline headline">
-          REFERRAL FRIENDS AND GET REWARDS
+          REFER FRIENDS AND GET REWARDS
         </h1>
 
         <p className="main-section__form--text">

@@ -1,6 +1,66 @@
-.footer-store {
+.footer__store {
   background-color: #45565e;
-  height: 6rem;
-  width: 100vw;
   border: 1px solid $color-black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 11rem;
+  width: 100vw;
+
+  &--container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid $color-blue-dark;
+    border-radius: 15px;
+    padding: 2.2rem;
+    margin-left: 2rem;
+
+    height: 2rem;
+    width: 19rem;
+
+    &--icon {
+      height: 5rem;
+    }
+
+    &--text {
+      color: $color-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      &--paragraph {
+        font-size: 1.1rem;
+      }
+
+      &--headline {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &--review {
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    width: 30rem;
+
+    &--stars {
+      margin-left: 1.5rem;
+    }
+
+    &--star {
+      fill: $color-white;
+      height: 1.3rem;
+      margin-left: 0.2rem;
+    }
+
+    &--text {
+      margin-left: 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
 }
