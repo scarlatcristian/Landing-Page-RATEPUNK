@@ -1,6 +1,32 @@
-header {
-  height: 3rem;
-  width: 100vw;
+.header {
   background-color: $color-white;
   border-bottom: 1px solid $color-black;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 5rem;
+  width: 100vw;
+
+  &__links {
+    &--link {
+      color: $color-blue-dark;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.1s ease;
+
+      &:not(:first-child) {
+        margin-left: 5.5rem;
+      }
+
+      &:visited {
+        color: $color-blue-dark;
+      }
+
+      &:hover {
+        color: $color-blue-light;
+      }
+    }
+  }
 }

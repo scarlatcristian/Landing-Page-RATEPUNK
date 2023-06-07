@@ -11,24 +11,15 @@
       justify-content: center;
       margin-bottom: 5rem;
 
-      &-step-1 {
-      }
-
-      &-step-2 {
-      }
-
-      &-step-3 {
-      }
-
       &--steps {
         color: $color-blue-light;
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         margin-bottom: 1.4rem;
       }
 
       &--headline {
         color: $color-blue-dark;
-        font-size: 2.1rem;
+        font-size: 2.5rem;
         margin-bottom: 1.3rem;
       }
 
@@ -48,12 +39,12 @@
 }
 
 .invite {
-  height: 9rem;
+  height: 10rem;
   margin-right: 3rem;
 }
 
 .collect-coins {
-  height: 9rem;
+  height: 10rem;
   margin-left: 3rem;
 }
 
