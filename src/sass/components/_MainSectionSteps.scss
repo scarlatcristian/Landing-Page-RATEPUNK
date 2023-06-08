@@ -1,17 +1,27 @@
 .main-section {
   &__steps {
     margin-left: 2rem;
-    width: 33rem;
+    width: 25%;
     height: fit-content;
     padding: 5rem;
     margin-top: 10rem;
 
+    @include respond(tab-port) {
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+
     &--container {
       display: flex;
       align-items: center;
-      justify-content: center;
       margin-top: -3rem;
       margin-bottom: 9rem;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        text-align: center;
+      }
 
       &--steps {
         color: $color-blue-light;
@@ -29,6 +39,10 @@
       &--text {
         color: $color-blue-dark;
         font-size: 1.5rem;
+
+        @include respond(tab-port) {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -37,6 +51,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+
+      @include respond(tab-port) {
+        align-items: center;
+      }
     }
   }
 }
@@ -54,4 +72,23 @@
 .voucher {
   height: 7rem;
   margin-right: 3rem;
+}
+
+@include respond(tab-port) {
+  .icon {
+    margin: 0;
+    margin-bottom: 2rem;
+    height: 10rem;
+  }
+
+  .order:nth-child(2) {
+    order: 1;
+  }
+  .order:nth-child(1) {
+    order: 2;
+  }
+
+  .voucher {
+    height: 8rem;
+  }
 }

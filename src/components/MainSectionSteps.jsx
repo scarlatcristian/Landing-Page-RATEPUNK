@@ -1,8 +1,12 @@
 const MainSectionSteps = () => {
   return (
     <div className="main-section__steps">
-      <div className="main-section__steps--container step-1">
-        <img src="./src/assets/invite.svg" alt="invite" className="invite" />
+      <div className="main-section__steps--container">
+        <img
+          src="./src/assets/invite.svg"
+          alt="invite"
+          className="invite icon"
+        />
         <div className="main-section__steps--steps">
           <h4 className="main-section__steps--container--steps">STEP 1</h4>
           <h3 className="main-section__steps--container--headline headline">
@@ -14,8 +18,8 @@ const MainSectionSteps = () => {
         </div>
       </div>
 
-      <div className="main-section__steps--container step-2">
-        <div className="main-section__steps--steps">
+      <div className="main-section__steps--container">
+        <div className="main-section__steps--steps order">
           <h4 className="main-section__steps--container--steps">STEP 2</h4>
           <h3 className="main-section__steps--container--headline headline">
             COLLECT COINS
@@ -28,12 +32,16 @@ const MainSectionSteps = () => {
         <img
           src="./src/assets/collect-coins.svg"
           alt="collect-coins"
-          className="collect-coins"
+          className="collect-coins icon order"
         />
       </div>
 
-      <div className="main-section__steps--container step-3">
-        <img src="./src/assets/voucher.svg" alt="voucher" className="voucher" />
+      <div className="main-section__steps--container">
+        <img
+          src="./src/assets/voucher.svg"
+          alt="voucher"
+          className="voucher icon"
+        />
         <div className="main-section__steps--steps">
           <h4 className="main-section__steps--container--steps">STEP 3</h4>
           <h3 className="main-section__steps--container--headline headline">

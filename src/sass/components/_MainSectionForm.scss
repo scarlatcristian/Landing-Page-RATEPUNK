@@ -9,17 +9,29 @@
     justify-content: flex-start;
     padding: 5rem;
     margin: 5rem;
-    width: 28rem;
+    width: 25%;
     height: fit-content;
+
+    @include respond(tab-port) {
+      width: 90%;
+      padding: 2rem;
+    }
 
     &--headline {
       font-size: 3.5rem;
+
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
     }
 
     &--text {
       font-size: 1.5rem;
       color: $color-blue-dark;
       margin-top: 3rem;
+      @include respond(tab-port) {
+        font-size: 1.3rem;
+      }
     }
 
     &--input-btn {
@@ -42,6 +54,10 @@
       padding: 1rem;
       text-indent: 4rem;
 
+      @include respond(tab-port) {
+        width: 80%;
+      }
+
       &:focus {
         outline: none;
       }
@@ -56,6 +72,10 @@
       height: 2.8rem;
       width: 100%;
       padding: 1rem;
+
+      @include respond(tab-port) {
+        width: 80%;
+      }
     }
 
     &--limits {
@@ -63,6 +83,10 @@
       color: $color-grey-dark;
       margin-top: 10.5rem;
       margin-bottom: 1rem;
+
+      @include respond(tab-port) {
+        margin-top: 5.5rem;
+      }
     }
   }
 }
