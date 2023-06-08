@@ -6,15 +6,16 @@ const FooterContact = () => {
         <div className="header__icon">
           <img src="./src/assets/logo.svg" alt="logo" />
         </div>
+        <div>
+          <p>
+            Ratepunk compares hotel room prices across the major online travel
+            agencies. When you search for a room, Ratepunk extension scans the
+            top booking sites and runs a price comparison, so you can be
+            confident in knowing you're getting the best deal!
+          </p>
 
-        <p>
-          Ratepunk compares hotel room prices across the major online travel
-          agencies. When you search for a room, Ratepunk extension scans the top
-          booking sites and runs a price comparison, so you can be confident in
-          knowing you're getting the best deal!
-        </p>
-
-        <p>© 2021 Ratepunk. All Rights Reserved.</p>
+          <p>© 2021 Ratepunk. All Rights Reserved.</p>
+        </div>
       </div>
 
       <div className="footer__contact--quick-links">

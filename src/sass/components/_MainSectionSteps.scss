@@ -2,8 +2,9 @@
   &__steps {
     margin-left: 2rem;
     width: 33rem;
-    height: 50rem;
+    height: fit-content;
     padding: 5rem;
+    margin-top: 10rem;
 
     &--container {
       display: flex;
@@ -11,7 +12,6 @@
       justify-content: center;
       margin-top: -3rem;
       margin-bottom: 9rem;
-      width: 95%;
 
       &--steps {
         color: $color-blue-light;
