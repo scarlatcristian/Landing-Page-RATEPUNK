@@ -2,24 +2,27 @@
 const FooterContact = () => {
   return (
     <footer className="footer__contact">
-      <div className="footer__contact--rate-punk">
+      <div className="footer__contact--rate-punk footer__contact--rate-punk--icon">
         <div className="header__icon">
           <img src="./src/assets/logo.svg" alt="logo" />
         </div>
-        <div>
+
+        <div className="footer__contact--rate-punk--text">
           <p>
             Ratepunk compares hotel room prices across the major online travel
             agencies. When you search for a room, Ratepunk extension scans the
             top booking sites and runs a price comparison, so you can be
             confident in knowing you're getting the best deal!
           </p>
+        </div>
 
+        <div className="footer__contact--rate-punk--copyright">
           <p>© 2021 Ratepunk. All Rights Reserved.</p>
         </div>
       </div>
 
       <div className="footer__contact--quick-links">
-        <h1>QUICK LINKS</h1>
+        <h3 className="footer__contact--header">QUICK LINKS</h3>
 
         <a href="#" className="footer__contact--quick-links--link">
           Price Comparison
@@ -39,18 +42,23 @@ const FooterContact = () => {
       </div>
 
       <div className="footer__contact--social-media">
-        <div className="footer__contact--social-media--contact">
-          <h1>Contact</h1>
-          <div className="footer__contact--social-media--email">
+        <div className="footer__contact--social-media--container">
+          <h3 className="footer__contact--header footer__contact--social-media--container-header">
+            CONTACT
+          </h3>
+
+          <div className="footer__contact--social-media--container--email">
             <img src="./src/assets/email-footer.svg" alt="email" />
             <p>hi@ratepunk.com</p>
           </div>
         </div>
 
-        <div className="footer__contact--social-media--social">
-          <h1>Social</h1>
+        <div className="footer__contact--social-media--container">
+          <h3 className="footer__contact--header footer__contact--social-media--container-header">
+            SOCIAL
+          </h3>
 
-          <div className="footer__contact--social-media--icons">
+          <div className="footer__contact--social-media--container--icons">
             <div className="footer__contact--social-media--icon">
               <img src="./src/assets/instagram.svg" alt="instagram" />
             </div>
