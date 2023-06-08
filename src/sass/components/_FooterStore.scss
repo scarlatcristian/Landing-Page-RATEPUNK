@@ -66,11 +66,12 @@
     width: 30rem;
 
     @include respond(tab-port) {
-      margin: 1.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
-    &--stars {
-      margin-left: 1.5rem;
+    @include respond(phone) {
+      justify-content: center;
     }
 
     &--star {

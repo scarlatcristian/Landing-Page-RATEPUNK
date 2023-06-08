@@ -48,7 +48,7 @@
       font-size: 1.5rem;
 
       @include respond(phone) {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         & p {
           line-height: 1.8rem;
         }
@@ -63,6 +63,10 @@
         position: absolute;
         bottom: 3rem;
         left: 3rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.3rem;
       }
     }
   }
@@ -94,7 +98,7 @@
       }
 
       @include respond(phone) {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
       }
 
       &:visited {
@@ -140,6 +144,10 @@
         display: flex;
         font-size: 1.5rem;
         gap: 1rem;
+
+        @include respond(phone) {
+          font-size: 1.3rem;
+        }
       }
 
       &--icons {
