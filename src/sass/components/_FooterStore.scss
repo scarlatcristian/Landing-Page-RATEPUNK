@@ -10,6 +10,11 @@
   height: 11rem;
   width: 100vw;
 
+  @include respond(phone) {
+    height: fit-content;
+    flex-direction: column;
+  }
+
   &--container {
     display: flex;
     justify-content: flex-start;
@@ -21,6 +26,12 @@
 
     height: 2rem;
     width: 19rem;
+
+    @include respond(phone) {
+      width: 65%;
+      margin-top: 1.8rem;
+      margin-left: 0;
+    }
 
     &--icon {
       height: 5rem;
@@ -48,6 +59,10 @@
     display: flex;
     align-items: center;
     width: 30rem;
+
+    @include respond(phone) {
+      margin: 1.8rem;
+    }
 
     &--stars {
       margin-left: 1.5rem;
