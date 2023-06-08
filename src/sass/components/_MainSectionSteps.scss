@@ -55,6 +55,10 @@
 
       @include respond(tab-port) {
         align-items: center;
+
+        &:last-child {
+          margin-bottom: -5rem;
+        }
       }
     }
   }
