@@ -3,7 +3,7 @@ const FooterContact = () => {
   return (
     <footer className="footer__contact">
       <div className="footer__contact--rate-punk footer__contact--rate-punk--icon">
-        <div className="header__icon">
+        <div className="header__icon footer__icon">
           <img src="./src/assets/logo.svg" alt="logo" />
         </div>
 
