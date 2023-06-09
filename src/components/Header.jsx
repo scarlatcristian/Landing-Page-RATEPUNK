@@ -8,11 +8,17 @@ const Header = () => {
   const openModal = () => {
     setIsOpen(true);
     document.body.style.overflow = "hidden";
+    document
+      .querySelector(".footer__contact--rate-punk--copyright")
+      .classList.add("footer__contact--hidden");
   };
 
   const closeModal = () => {
     setIsOpen(false);
     document.body.style.overflow = "auto";
+    document
+      .querySelector(".footer__contact--rate-punk--copyright")
+      .classList.remove("footer__contact--hidden");
   };
 
   return (

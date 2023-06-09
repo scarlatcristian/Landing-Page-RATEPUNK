@@ -10,7 +10,10 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 3rem;
-    position: relative;
+  }
+
+  &--hidden {
+    display: none;
   }
 
   &--header {
@@ -60,9 +63,8 @@
       color: $color-grey-dark;
 
       @include respond(tab-port) {
-        position: absolute;
-        bottom: 3rem;
-        left: 3rem;
+        position: relative;
+        bottom: -48rem;
       }
 
       @include respond(phone) {
