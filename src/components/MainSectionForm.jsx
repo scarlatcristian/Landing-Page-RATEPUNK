@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useRef } from "react";
+import saveEmail from "../../JSONBin";
 
 const referralLink = "https://ratepunk.com/referral";
 
@@ -11,18 +12,20 @@ const MainSectionForm = () => {
 
   const inputRef = useRef(null);
 
+  // Copy referral link
   const handleCopyClick = () => {
     inputRef.current.select();
     document.execCommand("copy");
   };
 
+  // Check if the input is valid email
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
     setEmail(inputValue);
     setValidEmail(validateEmail(inputValue));
   };
 
-  // Check if email is valid
+  // Validate email
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -32,22 +35,22 @@ const MainSectionForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validEmail) {
-      console.log("Email is valid");
-      console.log(email);
-
+      // if email is valid save to JSONBin
+      saveEmail(email);
+      // Get the referral link ready
       setGetReferral(true);
+      // Set the text
       setMessageSubmission(
         <div className="main-section__form--messageSubmission">
           <img src="./src/assets/success.svg" alt="checked" id="success" />
-          <h4 style={{ color: "##1F343E" }}>Your email is confirmed!</h4>
+          <h4 style={{ color: "#1F343E" }}>Your email is confirmed!</h4>
         </div>
       );
     } else {
-      console.log("Email is invalid");
-
+      // If email is invalid set this text
       setMessageSubmission(
         <div className="main-section__form--messageSubmission">
-          <h4 style={{ color: "red" }}>Enter a valid email</h4>
+          <h4 style={{ color: "#ED6F82" }}>Enter a valid email</h4>
         </div>
       );
     }
