@@ -1,10 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useState, useRef } from "react";
+
+const referralLink = "https://ratepunk.com/referral";
 
 const MainSectionForm = () => {
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
   const [messageSubmission, setMessageSubmission] = useState("");
+  const [getReferral, setGetReferral] = useState(false);
+
+  const inputRef = useRef(null);
+
+  const handleCopyClick = () => {
+    inputRef.current.select();
+    document.execCommand("copy");
+  };
 
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
@@ -12,20 +22,24 @@ const MainSectionForm = () => {
     setValidEmail(validateEmail(inputValue));
   };
 
+  // Check if email is valid
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
+  // Submitting Form
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validEmail) {
       console.log("Email is valid");
+      console.log(email);
 
+      setGetReferral(true);
       setMessageSubmission(
         <div className="main-section__form--messageSubmission">
           <img src="./src/assets/success.svg" alt="checked" id="success" />
-          <h3 style={{ color: "##1F343E" }}>Your email is confirmed!</h3>
+          <h4 style={{ color: "##1F343E" }}>Your email is confirmed!</h4>
         </div>
       );
     } else {
@@ -52,20 +66,42 @@ const MainSectionForm = () => {
           cash-out at 20 coins.
         </p>
 
-        <div className="main-section__form--input-btn">
-          {messageSubmission}
+        {getReferral ? (
+          <div className="main-section__form--input-btn">
+            {messageSubmission}
 
-          <input
-            type="text"
-            value={email}
-            onChange={handleInputChange}
-            placeholder="Enter your email address"
-            className="main-section__form--input"
-          />
-          <button type="submit" className="main-section__form--btn">
-            Get Referral Link
-          </button>
-        </div>
+            <div className="main-section__form--input-btn--referral">
+              <input
+                type="text"
+                defaultValue={referralLink}
+                ref={inputRef}
+                className="main-section__form--input--referral"
+              />
+              <button
+                type="button"
+                onClick={handleCopyClick}
+                className="main-section__form--btn--referral"
+              >
+                Copy
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="main-section__form--input-btn">
+            {messageSubmission}
+
+            <input
+              type="text"
+              value={email}
+              onChange={handleInputChange}
+              placeholder="Enter your email address"
+              className="main-section__form--input"
+            />
+            <button type="submit" className="main-section__form--btn">
+              Get Referral Link
+            </button>
+          </div>
+        )}
 
         <p className="main-section__form--limits">
           Limits on max rewards apply.
