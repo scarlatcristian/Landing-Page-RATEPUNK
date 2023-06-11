@@ -13,4 +13,11 @@
 
 # Folder Structure
 
-JSONBin.ts -
+src/
+assets - icons used in the project
+components - the React components
+sass - the style each components, as well as mixins and variables
+App.tsx - main app component
+index.scss - imports all the scss files
+JSON.bin.ts - saves the email address inside the JSONBin
+main.tsx - renders the App

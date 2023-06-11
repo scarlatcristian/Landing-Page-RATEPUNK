@@ -1,7 +1,7 @@
 import React from "react";
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useRef } from "react";
-import saveEmail from "../../JSONBin";
+import saveEmail from "../JSONBin";
 
 const referralLink = "https://ratepunk.com/referral";
 
