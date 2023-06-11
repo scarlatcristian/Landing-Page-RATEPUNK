@@ -1,24 +1,31 @@
+import React from "react";
 import { useState } from "react";
 
 import Modal from "./Modal";
 
-const Header = () => {
+const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);
     document.body.style.overflow = "hidden";
-    document
-      .querySelector(".footer__contact--rate-punk--copyright")
-      .classList.add("footer__contact--hidden");
+    const footerElement = document.querySelector<HTMLElement>(
+      ".footer__contact--rate-punk--copyright"
+    );
+    if (footerElement) {
+      footerElement.classList.add("footer__contact--hidden");
+    }
   };
 
   const closeModal = () => {
     setIsOpen(false);
     document.body.style.overflow = "auto";
-    document
-      .querySelector(".footer__contact--rate-punk--copyright")
-      .classList.remove("footer__contact--hidden");
+    const footerElement = document.querySelector<HTMLElement>(
+      ".footer__contact--rate-punk--copyright"
+    );
+    if (footerElement) {
+      footerElement.classList.remove("footer__contact--hidden");
+    }
   };
 
   return (

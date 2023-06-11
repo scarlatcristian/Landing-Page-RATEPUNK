@@ -1,9 +1,10 @@
+import React from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import FooterStore from "./components/FooterStore";
 import FooterContact from "./components/FooterContact";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div>
       <Header />
@@ -12,6 +13,6 @@ function App() {
       <FooterContact />
     </div>
   );
-}
+};
 
 export default App;

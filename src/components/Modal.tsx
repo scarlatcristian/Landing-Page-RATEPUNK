@@ -1,5 +1,10 @@
-const Modal = (props) => {
-  // eslint-disable-next-line react/prop-types
+import React from "react";
+
+interface ModalProps {
+  closeModal: () => void;
+}
+
+const Modal: React.FC<ModalProps> = (props) => {
   const { closeModal } = props;
 
   return (

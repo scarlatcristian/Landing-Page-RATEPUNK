@@ -1,5 +1,7 @@
+import React from "react";
+
 /* eslint-disable react/no-unescaped-entities */
-const FooterContact = () => {
+const FooterContact: React.FC = () => {
   return (
     <footer className="footer__contact">
       <div className="footer__contact--rate-punk footer__contact--rate-punk--icon">

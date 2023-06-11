@@ -1,38 +1,42 @@
+import React from "react";
 /* eslint-disable react/no-unescaped-entities */
 import { useState, useRef } from "react";
 import saveEmail from "../../JSONBin";
 
 const referralLink = "https://ratepunk.com/referral";
 
-const MainSectionForm = () => {
+const MainSectionForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
-  const [messageSubmission, setMessageSubmission] = useState("");
+  const [messageSubmission, setMessageSubmission] =
+    useState<JSX.Element | null>(null);
   const [getReferral, setGetReferral] = useState(false);
 
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Copy referral link
   const handleCopyClick = () => {
-    inputRef.current.select();
-    document.execCommand("copy");
+    if (inputRef.current) {
+      inputRef.current.select();
+      document.execCommand("copy");
+    }
   };
 
   // Check if the input is valid email
-  const handleInputChange = (e) => {
-    const inputValue = e.target.value;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const inputValue: string = e.target.value;
     setEmail(inputValue);
     setValidEmail(validateEmail(inputValue));
   };
 
   // Validate email
-  const validateEmail = (email) => {
+  const validateEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
   // Submitting Form
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (validEmail) {
       // if email is valid save to JSONBin

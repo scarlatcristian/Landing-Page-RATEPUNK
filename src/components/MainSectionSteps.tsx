@@ -1,4 +1,6 @@
-const MainSectionSteps = () => {
+import React from "react";
+
+const MainSectionSteps: React.FC = () => {
   return (
     <div className="main-section__steps">
       <div className="main-section__steps--container">
