@@ -3,7 +3,12 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer__store">
-      <div className="footer__store--container">
+      <a
+        href="https://chrome.google.com/webstore/detail/ratepunk-same-hotel-way-c/gdaioanblcnghddimngklkhgcbomfdck?utm_source=ratepunk"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer__store--container"
+      >
         <img
           src="./src/assets/chrome.svg"
           alt="chrome"
@@ -18,9 +23,14 @@ const Footer = () => {
             chrome web store
           </h2>
         </div>
-      </div>
+      </a>
 
-      <div className="footer__store--container">
+      <a
+        href="https://www.apple.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer__store--container"
+      >
         <img
           src="./src/assets/apple.svg"
           alt="apple"
@@ -35,7 +45,7 @@ const Footer = () => {
             apple app store
           </h2>
         </div>
-      </div>
+      </a>
 
       <div className="footer__store--review">
         <div className="footer__store--review--stars">
