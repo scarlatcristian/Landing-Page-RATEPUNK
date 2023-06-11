@@ -5,7 +5,7 @@ import saveEmail from "../../JSONBin";
 
 const referralLink = "https://ratepunk.com/referral";
 
-const MainSectionForm: React.FC = () => {
+const MainSectionForm = () => {
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
   const [messageSubmission, setMessageSubmission] =
@@ -46,7 +46,11 @@ const MainSectionForm: React.FC = () => {
       // Set the text
       setMessageSubmission(
         <div className="main-section__form--messageSubmission">
-          <img src="./src/assets/success.svg" alt="checked" id="success" />
+          <img
+            src="./src/assets/success.svg"
+            alt="checked"
+            className="success-icon"
+          />
           <h4 style={{ color: "#1F343E" }}>Your email is confirmed!</h4>
         </div>
       );

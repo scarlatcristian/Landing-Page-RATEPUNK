@@ -26,32 +26,32 @@
 
       &--steps {
         color: $color-blue-light;
-        font-size: 1.2rem;
+        font-size: $font-size-small;
         margin-bottom: 0.6rem;
         letter-spacing: 0.2rem;
       }
 
       &--headline {
         color: $color-blue-dark;
-        font-size: 2.3rem;
+        font-size: $font-size-big;
         margin-bottom: 0.6rem;
       }
 
       &--text {
         color: $color-blue-dark;
-        font-size: 1.5rem;
+        font-size: $font-size-default;
 
         @include respond(tab-port) {
-          font-size: 1.3rem;
+          font-size: $font-size-small;
         }
       }
     }
 
     &--steps {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      flex-direction: column;
 
       @include respond(tab-port) {
         align-items: center;

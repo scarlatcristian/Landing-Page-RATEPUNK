@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Modal from "./Modal";
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {

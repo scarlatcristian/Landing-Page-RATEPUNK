@@ -1,8 +1,6 @@
 .main-section {
   background-color: $color-yellow-light;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   height: fit-content;
   padding: 2rem;
 

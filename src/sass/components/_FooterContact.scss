@@ -1,9 +1,7 @@
 .footer__contact {
   background-color: #f8f4f9;
   color: $color-blue-dark;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   padding: 5rem;
 
   @include respond(tab-port) {
@@ -48,10 +46,10 @@
     }
 
     &--text {
-      font-size: 1.5rem;
+      font-size: $font-size-default;
 
       @include respond(phone) {
-        font-size: 1.3rem;
+        font-size: $font-size-small;
         & p {
           line-height: 1.8rem;
         }
@@ -59,16 +57,17 @@
     }
 
     &--copyright {
-      font-size: 1.5rem;
+      font-size: $font-size-default;
       color: $color-grey-dark;
 
       @include respond(tab-port) {
         position: relative;
-        bottom: -47rem;
+        bottom: -48rem;
+        font-size: $font-size-small;
       }
 
       @include respond(phone) {
-        font-size: 1.3rem;
+        font-size: $font-size-small;
       }
     }
   }
@@ -93,14 +92,14 @@
       color: $color-blue-dark;
       text-decoration: none;
       transition: color 0.1s ease;
-      font-size: 1.5rem;
+      font-size: $font-size-default;
 
       @include respond(tab-port) {
-        margin-top: 1.5rem;
+        margin-top: $margin-default;
       }
 
       @include respond(phone) {
-        font-size: 1.3rem;
+        font-size: $font-size-small;
       }
 
       &:visited {
@@ -136,26 +135,23 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      flex-direction: column;
 
       &-header {
-        margin-bottom: 1.5rem;
+        margin-bottom: $margin-default;
       }
 
       &--email {
         display: flex;
-        font-size: 1.5rem;
+        font-size: $font-size-default;
         gap: 1rem;
 
         @include respond(phone) {
-          font-size: 1.3rem;
+          font-size: $font-size-small;
         }
       }
 
       &--icons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexCenter;
       }
     }
 
@@ -164,9 +160,7 @@
       border: 1px solid $color-black;
       border-radius: 7px;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexCenter;
 
       height: 2.5rem;
       width: 2.5rem;
@@ -181,5 +175,6 @@
 @include respond(tab-port) {
   .footer__icon {
     margin-bottom: 3rem;
+    margin-left: -1rem;
   }
 }
