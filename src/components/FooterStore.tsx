@@ -26,7 +26,7 @@ const Footer = () => {
       </a>
 
       <a
-        href="https://www.apple.com"
+        href="https://apps.apple.com/app/ratepunk/id1607823726"
         target="_blank"
         rel="noopener noreferrer"
         className="footer__store--container"
